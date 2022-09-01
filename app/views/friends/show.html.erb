@@ -1,0 +1,21 @@
+<div class="text-dark p-4 rounded" style="background-color: #dee2e6;">
+  <div class="p-5">
+    <h1 class="display-4"><%= @friend.first_name + " " + @friend.last_name %></h1>
+    <hr>
+    <p class="lead">
+      <%= @friend.email %>
+      <br>
+      <%= @friend.phone %>
+      <br>
+      <%= @friend.twitter %>
+      <br>
+      <%= @friend.user_id %>
+      <br>
+    </p>
+  </div>
+  <div style="padding-top: 10px;">
+    <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-secondary" %>
+    <%= link_to "Back to friends", friends_path, class: "btn btn-dark" %>
+    <!-- # = button_to "Remove this friend", @friend,class: "btn btn-danger", method: :delete --->
+  </div>
+</div>

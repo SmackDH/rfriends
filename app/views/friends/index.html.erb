@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+  <table class="table table-striped table-sm table-bordered" id="friends">
+    <thead class="bg-dark text-light">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Twitter Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @friends.each do |friend| %>
+        <%= render friend %>
+      </tbody>
+    <% end %>
+  </table>
+  <%= link_to "New friend", new_friend_path, class:"btn btn-secondary"  %>
+<% else %>
+  <h1>Wifey is cutie</h1>
+  This is my first site.
+<% end %>
